@@ -2,6 +2,7 @@ version: '3.4'
 
 services:
   bds:
+    container_name: minecraft-my-conf
     image: itzg/minecraft-bedrock-server
     environment:
       EULA: "TRUE"
