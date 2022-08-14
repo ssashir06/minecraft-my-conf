@@ -2,8 +2,9 @@ version: '3.4'
 
 services:
   bds:
-    container_name: minecraft-my-conf
-    image: itzg/minecraft-bedrock-server
+    container_name: minecraft-my-server
+    build:
+      context: custom-bds
     environment:
       EULA: "TRUE"
       GAMEMODE: survival
@@ -16,4 +17,4 @@ services:
     stdin_open: true
     tty: true
     stop_grace_period: 10m00s
-
+    restart: "always"
